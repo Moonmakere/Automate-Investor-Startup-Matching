@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="Register.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("registerForm");
+            form.addEventListener("submit", async function(event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const formObject = Object.fromEntries(formData.entries());
+                
+                const response = await fetch('/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formObject)
+                });
+
+                const result = await response.json();
+                alert(result.message);
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--LOGIN SECTION-->
+    <div class="wrapper">
+        <form id="registerForm">
+            <div class="mb-5 mb-md-7">
+                <h1 class="h2 mb-0 ng-binding">Request Access</h1>
+                <p>Just complete the form below and send us a message</p>
+            </div>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="js-form-message form-group">
+                    <label class="input-label" for="Name">
+                        <span>Name<sup>*</sup></span>
+                    </label>
+                    <input tabindex="1" type="text" class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" name="name" id="name" required ng-model="vm.contactUsDetails.name" style>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="js-form-message form-group">
+                    <label class="input-label" for="StartupName">
+                        <span class="ng-binding">StartupName<sup>*</sup></span>
+                    </label>
+                    <input tabindex="2" type="text" class="form-control ng-pristine  ng-untouched ng-empty ng-invalid ng-invalid-required" name="startupname" id="startupname" required ng-model="vm.ContactUsDetails.StartupName">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="js-form-message form-group">
+                    <label class="input-label" for="Email">
+                        <span class="ng-binding">Email-Id<sup>*</sup></span>
+                    </label>
+                    <input tabindex="3" type="email" class="form-control ng-pristine  ng-untouched ng-empty ng-invalid ng-invalid-required" name="email" id="email" required ng-model="vm.ContactUsDetails.email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="js-form-message form-group">
+                    <label class="input-label" for="Regions/Countries">
+                        <span>Regions/Countries <sup>*</sup></span>
+                    </label>
+                    <input tabindex="4" type="text" class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" name="regions/countries" id="regions/countries" required ng-model="vm.contactUsDetails.regions/countries" style>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="js-form-message form-group">
+                    <label class="input-label" for="StartupStage">
+                        <span class="ng-binding">Startup Stage<sup>*</sup></span>
+                    </label>
+                    <input tabindex="5" type="text" class="form-control ng-pristine  ng-untouched ng-empty ng-invalid ng-invalid-required" name="startupstage" id="startupstage" required ng-model="vm.ContactUsDetails.StartupStage">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="js-form-message form-group">
+                    <label class="input-label" for="Industry">
+                        <span class="ng-binding">Industry<sup>*</sup></span>
+                    </label>
+                    <input tabindex="6" type="text" class="form-control ng-pristine  ng-untouched ng-empty ng-invalid ng-invalid-required" name="industry" id="industry" required ng-model="vm.ContactUsDetails.industry">
+                </div>
+            </div>
+        </div>
+        <div class="width:100%;">
+            <span class="d-flex justify-content-between align-items-center">
+                <div> <a tabindex="7" class="link-underline ge-link text-capitalize font-weight-normal ng-binding" ui-sref="footer.signupOptions()" href="/signup.html">Back to Signup Option</a> </div>
+                <button tabindex="6" class="submit-reset-pass-btn btn-lg btn-primary btn-lock ng-binding" type="submit" style="width:90px; float:right">Submit</button>
+            </span>
+        </div>
+        </form>
+            
+    </div>
+    
+</body>
+</html>

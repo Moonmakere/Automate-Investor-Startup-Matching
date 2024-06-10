@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="login-style.css">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const loginForm = document.getElementById("loginForm");
+      const resetForm = document.getElementById("resetForm");
+
+      loginForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const formData = new FormData(loginForm);
+        const formObject = Object.fromEntries(formData.entries());
+
+        const response = await fetch('/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formObject)
+        });
+
+        const result = await response.json();
+        alert(result.message);
+      });
+
+      resetForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        const formData = new FormData(resetForm);
+        const formObject = Object.fromEntries(formData.entries());
+
+        const response = await fetch('/reset-password', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formObject)
+        });
+
+        const result = await response.json();
+        alert(result.message);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="card">
+    <input type="checkbox" id="chk" aria-hidden="true" name="">
+    <div class="content">
+      <div class="front">
+        <div class="inner">
+          <h2>Log in</h2>
+           <p></p>
+          <input type="text" name="txt" placeholder="Username">
+          <input type="password" name="pswd" placeholder="Password">
+          <label for="chk" aria-hidden="true"> Forgot Password?</label>
+          <button type="button"> Login </button>
+          <div class="line-separator ng-binding">
+            <p> New to Startup Investor Connect? &nbsp;
+              <a tabndex="4" class="ge-link"  ui-sref="footer.signupOption()" href="">
+                <span class="ng-binding">Click Here</span>
+              </a></p>
+          </div>
+        </div>
+      </div> 
+
+        <div class="back">
+          <div class="inner">
+            <h2>Forgot Password?</h2>
+            <p>Enter your Email Address below to reset your password</p>
+            
+            <input type="email" name="email" placeholder="Email address">
+            <button type="button"> Reset </button>
+            <label for="chk" aria-hidden="true"> Back to Login</label>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+  
+</body>
+</html>
+
