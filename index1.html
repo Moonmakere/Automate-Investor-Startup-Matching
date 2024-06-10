@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Investor Connect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Jost', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
+    .outer-container {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #ccd7e3;
+        color: white;
+            border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header img {
+        width: 100px;
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0 10px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .menu li a:hover {
+        color: #061e37;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #425c79;
+        color: white;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        margin: 10px 0;
+        font-size: 3rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .buttons a {
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .buttons button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #6b9dd3;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+        background-color: #608ec0;
+        color: white;
+    }
+
+    .objectives {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .objectives h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        width: 60px;
+        height: 4px;
+        background-color: #87b3e1;
+        margin: 0 auto 20px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .feature {
+        background-color: #ece1e1;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(68, 41, 41, 0.1);
+    }
+
+    .feature img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .feature h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #1f2d3c;
+        color: white;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu li {
+            margin: 5px 0;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .buttons {
+            flex-direction: column;
+        }
+
+        .buttons button {
+            margin: 10px 0;
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <header class="header">
+          <img src="logo of investor.jpg" alt="Logo"> </a>
+        <ul class="menu">
+            <li><a href="#" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+            <li class="menu-item"><a href="#" class="elementor-item">About</a></li>
+            <li class="menu-item"><a href="#" class="elementor-item">For Startup</a></li>
+            <li class="menu-item"><a href="#" class="elementor-item">For Investor</a></li>
+        </ul>
+        <div>
+            <img width="32" height="32" src="UserLogin.svg" alt="User Login"><button> <a href="signup.html">SignUp</a></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h2>Welcome to</h2>
+            <h1><strong>Startup-Investor Connect</strong></h1>
+            <div class="buttons">
+                <a href="project/login.html"><button>Login</button></a>
+                <a href="Register/Register.html"><button>Register</button></a>
+                <div class="elementor-widget-container">
+                    <h5 class="elementor-heading-title elementor-size-default">Startup-Investor Connect is a platform that connects startups with investors to facilitate investment opportunities through AI based matchmaking. Through this, entrepreneurs will be able to directly reach out to multiple investors using one single application and can pitch their startup idea.</h5>		</div>
+            </div>
+        </div>
+
+        <div class="objectives">
+            <h1>Objectives</h1>
+            <div class="divider"></div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <img src="TechPowered.svg" alt="Tech Powered">
+                <h2>AI Based Matchmaking</h2>
+                <p>Use AI Based Matchmaking to connect startups with investors</p>
+            </div>
+            <div class="feature">
+                <img src="Investors.svg" alt="Investors">
+                <h2>Investment Opportunities</h2>
+                <p>Facilitate Investment in Startups</p>
+            </div>
+            <div class="feature">
+                <img src="Market.svg" alt="Market">
+                <h2>Marketplace</h2>
+                <p>Create a virtual marketplace of investors for innovative startups</p>
+            </div>
+            <div class="feature">
+                <img src="InvestmentOpportunity.svg" alt="Investment Opportunity">
+                <h2>Access in Emerging Cities</h2>
+                <p>Enable connects between investors and startups in emerging cities</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Startup Investor Connect. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert(`Button ${button.textContent} clicked!`);
+            });
+        });
+    });
+</script>
+</body>
+</html>

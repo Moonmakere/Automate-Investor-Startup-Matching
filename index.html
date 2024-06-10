@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Automate Startup-Investor Matching</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+    body {
+        font-family: 'Jost', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
+    .outer-container {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #ccd7e3;
+        color: white;
+            border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header img {
+        width: 100px;
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0 10px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .menu li a:hover {
+        color: #061e37;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #425c79;
+        color: white;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h2 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        margin: 10px 0;
+        font-size: 3rem;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .buttons a {
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .buttons button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #6b9dd3;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+        background-color: #608ec0;
+        color: white;
+    }
+
+    .objectives {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .objectives h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        width: 60px;
+        height: 4px;
+        background-color: #87b3e1;
+        margin: 0 auto 20px;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .feature {
+        background-color: #ece1e1;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(68, 41, 41, 0.1);
+    }
+
+    .feature img {
+        width: 70px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .feature h2 {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .feature p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #1f2d3c;
+        color: white;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu li {
+            margin: 5px 0;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .buttons {
+            flex-direction: column;
+        }
+
+        .buttons button {
+            margin: 10px 0;
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+	<img width="100" height="80" src="logo of investor.jpg" class="attachment-thumbnail size-thumbnail" alt="">	
+	<ul id="menu-1-d2fd12e" class="elementor-nav-menu" >
+				<div class="elementor-widget-container">
+							<img width="32" height="32" src="UserLogin.svg" class="attachment-thumbnail size-thumbnail"alt="">			
+		</div>
+		<div class="dialog-widget dialog-lightbox-widget dialog-type-buttons dialog-type-lightbox elementor-popup-modal" id="elementor-popup-modal-523" style><div class="dialog-widget-content dialog-lightbox-widget-content animated"><div class="dialog-header dialog-lightbox-header"></div><div class="dialog-message dialog-lightbox-message"><div data-elementor-type="popup" data-elementor-id="523" class="elementor elementor-523 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;zoomIn&quot;,&quot;entrance_animation_tablet&quot;:&quot;zoomIn&quot;,&quot;exit_animation&quot;:&quot;zoomIn&quot;,&quot;avoid_multiple_popups&quot;:&quot;yes&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0.9,&quot;sizes&quot;:[]},&quot;prevent_close_on_background_click&quot;:&quot;yes&quot;,&quot;triggers&quot;:[],&quot;timing&quot;:[]}" style="display: block;">
+			<div class="elementor-section elementor-top-section elementor-element elementor-element-24ee92b6 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="24ee92b6" data-element_type="section">
+	<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-widget-container">
+<span class="elementor-heading-title elementor-size-small">Welcome to
+<br>
+<strong>Startup-Investor Connect </strong></span>		</div>
+</div>
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<button><a href="project/login.html" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+	<span class="elementor-button-content-wrapper">
+	<span class="elementor-button-text">Login</span>
+</span></a></button>
+
+</div>
+</div>
+
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<button><a href="Register/Register.html" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+	<span class="elementor-button-content-wrapper">
+	<span class="elementor-button-text">Register</span>
+</span></a></button>
+</div>
+</div>
+<div class="elementor-element elementor-element-6224141c elementor-widget elementor-widget-html" data-id="6224141c" data-element_type="widget" data-widget_type="html.default">
+<div class="elementor-widget-container">
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+let elements = document.querySelectorAll( '.showpopup' );
+let popupposts = [ '523', ]; /* enter your popups IDs here , in the order you want them to show up */
+
+elements.forEach(function(e,i){
+e.addEventListener( 'mouseenter', function(){
+elementorProFrontend.modules.popup.showPopup( { id: popupposts[i] } );
+} );
+/*
+e.addEventListener( 'mouseleave', function(event){
+var document = elementorFrontend.documentsManager.documents[523];
+document.getModal().hide();
+});*/
+});
+});
+</script>		</div>
+</div>
+</div>
+</div>
+		</div>
+</div>
+	</div></div><div class="dialog-buttons-wrapper dialog-lightbox-buttons-wrapper"></div><div class="dialog-close-button dialog-lightbox-close-button"><i class="eicon-close"></i></div></div></div>
+	</ul>
+		
+		<li><a href="" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">Home</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="" class="elementor-item">About</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="" class="elementor-item">For Startup</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-565"><a href="" class="elementor-item">Fo Investor</a></li>
+	</ul>
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-xl">  <br> STARTUP</h2>
+<h1 class="elementor-heading-title elementor-size-xxl">INVESTOR CONNECT</h1>
+<div class="elementor-widget-container">
+	<div class="elementor-button-wrapper">
+<a href="" class="elementor-button-link elementor-button elementor-size-lg" role="button"><button>
+		<span class="elementor-button-text">For Startups</span>	</button>
+<a href="" class="elementor-button-link elementor-button elementor-size-lg" role="button"> <button>
+			<span class="elementor-button-text">For Investor</span>	</button>
+
+<div class="elementor-widget-container">
+	<h5 class="elementor-heading-title elementor-size-default">Startup-Investor Connect is a platform that connects startups with investors to facilitate investment opportunities through AI based matchmaking. Through this, entrepreneurs will be able to directly reach out to multiple investors using one single application and can pitch their startup idea.</h5>		</div>
+	
+	<div class="elementor-element elementor-element-5c50eba8 elementor-widget elementor-widget-heading" data-id="5c50eba8" data-element_type="widget" data-widget_type="heading.default">
+		<div class="elementor-widget-container">
+	<h1 class="elementor-heading-title elementor-size-default">Objectives</h1>		</div>
+		</div>
+		<div class="elementor-element elementor-element-1ece8cc0 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="1ece8cc0" data-element_type="widget" data-widget_type="divider.default">
+		<div class="elementor-widget-container">
+
+		<div class="elementor-divider">
+							<span class="elementor-divider-separator">
+										</span>
+
+
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3aadb0c6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3aadb0c6" data-element_type="section">
+					<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-20b27843" data-id="20b27843" data-element_type="column">
+						<div class="elementor-widget-wrap elementor-element-populated">
+		<section class="elementor-section elementor-inner-section elementor-element elementor-element-448a1897 elementor-section-boxed elementor-section-height-default elementor-section-height-default animated slideInLeft" data-id="448a1897" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;slideInLeft&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-43734ea5" data-id="43734ea5" data-element_type="column">
+								<div class="elementor-widget-wrap elementor-element-populated">
+				<div class="elementor-element elementor-element-5806f5dd elementor-widget elementor-widget-image" data-id="5806f5dd" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container">
+																				<img decoding="async" width="49" height="49" src="TechPowered.svg" class="attachment-thumbnail size-thumbnail" alt="">															</div>
+									</div>
+
+		<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2f540ad8" data-id="2f540ad8" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+	<div class="elementor-element elementor-element-386b7067 elementor-widget elementor-widget-heading" data-id="386b7067" data-element_type="widget" data-widget_type="heading.default">
+	<div class="elementor-widget-container">
+	<h2 class="elementor-heading-title elementor-size-default">AI Based Matchmaking</h2>		</div>
+	<div class="elementor-element elementor-element-a65a9e6 elementor-widget elementor-widget-heading" data-id="a65a9e6" data-element_type="widget" data-widget_type="heading.default">
+	<div class="elementor-widget-container">
+	<div class="elementor-heading-title elementor-size-default">Use AI Based Matchmaking to connect startups with investors</div>		</div>
+									</div>
+									</section>
+	<section><div class="elementor-widget-container">		
+	 <img decoding="async" width="70" height="70" src="Investors.svg" class="attachment-thumbnail size-thumbnail" alt="">	</div>		
+	<div class="elementor-widget-container">
+	<h2 class="elementor-heading-title elementor-size-default">Investment Opportunities</h2>		</div>	
+										
+	<div class="elementor-widget-container">
+	<div class="elementor-heading-title elementor-size-default">Facilitate Investment in Startups</div>		</div></section>
+	<section><div class="elementor-widget-container">
+	<img decoding="async" width="71" height="71" src="Market.svg" class="attachment-thumbnail size-thumbnail" alt="">	</div>
+	<div class="elementor-widget-container">
+		<h2 class="elementor-heading-title elementor-size-default">Marketplace</h2>		</div>
+
+		<div class="elementor-heading-title elementor-size-default">Create a virtual marketplace of investors for innovative startups </div>	</section>
+	<secttion> <div class="elementor-widget-container">
+	 <img loading="lazy" decoding="async" width="71" height="71" src="InvestmentOpportunity.svg" class="attachment-thumbnail size-thumbnail" alt="">	</div>
+		<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Access in Emerging Cities</h2>		</div>
+
+			<div class="elementor-heading-title elementor-size-default">Enable connects between investors and startups in emerging cities</div>	
+	</secttion>
+
+	<footer>
+        <p>&copy; 2024 Startup Investor Connect. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert(`Button ${button.textContent} clicked!`);
+            });
+        });
+    });
+</script>
+</body>
+</html>
